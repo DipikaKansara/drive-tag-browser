@@ -1,0 +1,17 @@
+name = "drive-tag-browser"
+main = "src/index.js"
+compatibility_date = "2024-09-23"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "drive-tag-browser-db"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+# Secrets (set via `wrangler secret put NAME`, do NOT put values here):
+# GOOGLE_CLIENT_ID
+# GOOGLE_CLIENT_SECRET
+# TOKEN_ENCRYPTION_KEY   (32-byte hex string used to encrypt refresh tokens)
+
+[vars]
+GOOGLE_REDIRECT_URI = "https://drive-tag-browser.YOUR-SUBDOMAIN.workers.dev/auth/callback"
+FRONTEND_URL = "http://localhost:5173"
